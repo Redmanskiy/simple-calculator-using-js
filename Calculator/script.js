@@ -1,14 +1,22 @@
+
+
+//Variables
 const display = document.getElementById("displaybar");
 
+
+//Functions
 function appendToDisplay(input) {
     display.value += input;
 }
 
 function Calculate() {
+
+
+    
     try {
         // Check if the input contains division by zero
         if (display.value.includes("/0")) {
-            throw new Error("Division by zero");
+            display.value = "Division by zero";
         }
         
         display.value = eval(display.value);
